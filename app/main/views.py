@@ -9,4 +9,3 @@ def index():
     title = 'Hello'
     
     return render_template("index.html", title = title)
-
