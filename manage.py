@@ -4,8 +4,8 @@ from flask_script import Manager,Server
 
 app=create_app('development')
 migrate = Migrate(app,db)
-manager.add_command('db',MigrateCommand)
 manager = Manager(app)
+manager.add_command('db',MigrateCommand)
 manager.add_command('server',Server)
 
 
