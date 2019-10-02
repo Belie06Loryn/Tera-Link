@@ -1,8 +1,7 @@
 import os
 
-
 class Config:
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://mwiza:mwiza@localhost/teras'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://mwiza:mwiza@localhost/yan'
     SECRET_KEY = ('SECRET_KEY')
     UPLOADED_PHOTOS_DEST ='app/static/images'
     MAIL_SERVER = 'smtp.googlemail.com'
@@ -15,7 +14,9 @@ class ProdConfig(Config):
     pass
 
 class DevConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://mwiza:mwiza@localhost/teras'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://mwiza:mwiza@localhost/yan'
+
+
 
     DEBUG = True
 
