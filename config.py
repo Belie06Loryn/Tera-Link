@@ -1,24 +1,26 @@
 import os
+class Config:
+    
+    SECRET_KEY = ('SECRET_KEY')
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:New@localhost/teras'
 
-class Config :
-  '''
-  Genarate configuration parent class
-  '''
-  SECRET_KEY ="anitha"
- 
+  
+
+class TestConfig(Config):
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:New@localhost/tera_test'
+
+
 class ProdConfig(Config):
-
-  pass
+   
+    pass
 
 class DevConfig(Config):
- 
-  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:1234@localhost/Tera'
-  DEBUG = True
-class TestConfig(Config):
-  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:1234@localhost/Tera'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:New@localhost/teras'
+
+    DEBUG = True
+
 config_options = {
-  'development':DevConfig,
-  'production':ProdConfig,
-  'test':TestConfig
-  }  
- 
+    'development':DevConfig,
+    'production':ProdConfig,
+    'test':TestConfig
+}

@@ -1,11 +1,11 @@
-from flask import render_template
+from flask import render_template,redirect,url_for,abort
 from . import main
+from flask_login import login_required, current_user
+from .. models import User
+from app import db
 
-# Views
-@main.route('/')
+@main.route("/")
 def index():
-
-  '''
-  View root page function that returns the index page and its data
-  '''
-  return render_template('index.html')
+    title = 'Hello'
+    
+    return render_template("index.html", title = title)
