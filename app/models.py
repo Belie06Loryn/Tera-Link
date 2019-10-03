@@ -1,6 +1,7 @@
 from . import db, login_manager
 from werkzeug.security import generate_password_hash,check_password_hash
 from flask_login import UserMixin
+from datetime import datetime
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -13,7 +14,8 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(255))
     email = db.Column(db.String(255))
     pass_secure = db.Column(db.String(255))
- 
+    post = db.relationship('Post', backref = 'users', lazy = 'dynamic')
+
     @property
     def password(self):
         raise AttributeError('You cannot read the password attribute')
@@ -27,3 +29,22 @@ class User(UserMixin, db.Model):
 
     def __repr__(self):
         return f'User {self.username}'
+
+class Post(db.Model):
+    '''
+    This class will contain database schema for posts
+    '''
+    __tablename__ = 'posts'
+    id = db.Column(db.Integer,primary_key=True)
+    image = db.Column(db.String())
+    description = db.Column(db.String())
+    user = db.Column(db.Integer, db.ForeignKey('users.id'))
+    
+    def save_post(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def get_posts(cls):
+        posts = Post.query.all()
+        return posts

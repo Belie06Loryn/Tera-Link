@@ -2,12 +2,12 @@ import os
 class Config:
     
     SECRET_KEY = ('SECRET_KEY')
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:New@localhost/teras'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://alexie:root@localhost/teras'
 
   
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:New@localhost/tera_test'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://alexie:root@localhost/tera_test'
 
 
 class ProdConfig(Config):
@@ -15,7 +15,7 @@ class ProdConfig(Config):
     pass
 
 class DevConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:New@localhost/teras'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://alexie:root@localhost/teras'
 
     DEBUG = True
 
