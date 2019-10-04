@@ -3,7 +3,7 @@ class Config:
     
     SECRET_KEY = ('SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://alexie:root@localhost/teras'
-
+    UPLOADED_PHOTOS_DEST ='app/static/photos'
   
 
 class TestConfig(Config):

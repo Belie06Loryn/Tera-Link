@@ -14,22 +14,21 @@
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/"> Home </a>
-            <a class="navbar-brand" href="new_service.html"> Post </a>
+            <a class="navbar-brand" href="{{url_for('main.profile')}}"> Credentials </a>
             <a class="navbar-brand" href="/"> ContactUs </a>
-            <a class="navbar-brand" href="/"> AboutUs </a>
-            <ul class="nav navbar-nav">
-                
-            </ul>
+            <a class="navbar-brand" href="#about"> AboutUs </a>
+            
         </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
+        <span><div class="navbar-collapse collapse">
+            <span class="nav navbar-nav navbar-right">
                 {% if current_user.is_authenticated %}
-                <li><a href="{{url_for('auth.logout')}}">SIGN OUT</a></li>
+                <a class="navbar-brand" href="/add/new_service">Post</a>
+                <a class="navbar-brand" href="{{url_for('auth.logout')}}">SIGN OUT</a>
                 {% else %}
-                <li><a href="{{url_for('auth.login')}}">SIGN IN</a></li>
+                <a href="{{url_for('auth.login')}}">SIGN IN</a>
                 {%endif%}
-            </ul>
-        </div>
+            </span>
+        </div></span>
 
     </div>
 </div>

@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+    <div class="col-md-8">
+        {% for images in posite  %}
+    
+        <img src="{{url_for('static',filename=images.image)}}"  class="card-img">
+        <p>{{images.description}}</p>
+        {% endfor %}
+    </div>
+
+{% endblock %}    

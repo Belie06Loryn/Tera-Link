@@ -31,13 +31,24 @@ footer {
   text-align: center;
   font-size: 10px;
 }
+.rotateimg270 {
+  -webkit-transform:rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
 </style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Share+Tech+Mono&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Share+Tech+Mono&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
  <div class="container" >
-  <img src="static/photo/teralogo.png" class="image" style="height: 370px;"><h1 class="imaje"></h1>
+  <img src="static/photos/teralogo.png" class="image" style="height: 370px;"><h1 class="imaje"></h1>
  </div><br><br><br><br>
  <div class="container">
     <div class="col-md-1"></div>
@@ -48,7 +59,7 @@ footer {
    </div>
    <div class="col-md-1"></div>
    <div class="col-md-3">
-     <img src="static/photo/kwe.jpg" style="width:100%;height: 230px;" >
+     <img src="static/photos/kwe.jpg" style="width:100%;height: 230px;" >
    </div>
    <div class="col-md-2"></div>
   </div><br><br>
@@ -61,7 +72,7 @@ footer {
         </button>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="/add/new_service">Painter</a>
-          <a class="dropdown-item" href="/login">Chef</a>
+          <a class="dropdown-item" href="/add/new_service">Chef</a>
         </div>
       </div>
   </div><br><br><br><br>
@@ -78,13 +89,13 @@ footer {
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-              <img src="static/photo/chef1.jpg" alt="Los Angeles" style="width:100%;height: 230px;">
+              <img src="static/photos/chef1.jpg" alt="Los Angeles" style="width:100%;height: 230px;">
             </div>
             <div class="item">
-              <img src="static/photo/chef2.jpg" alt="Chicago" style="width:100%;height: 230px;">
+              <img src="static/photos/chef2.jpg" alt="Chicago" style="width:100%;height: 230px;">
             </div>
             <div class="item">
-              <img src="static/photo/chef3.jpg" alt="New york" style="width:100%;height: 230px;">
+              <img src="static/photos/chef3.jpg" alt="New york" style="width:100%;height: 230px;">
             </div>
           </div>
           <!-- Left and right controls -->
@@ -106,8 +117,56 @@ footer {
   </div><br><br>
   <div class="container">
     
+  </div><br><br><br><br>
+  <div class="container" id="about">
+    <h1 style="text-align: center; font-weight: bolder;font-family: 'Nothing You Could Do', cursive;
+  font-family: 'Share Tech Mono', monospace;">ABOUT</h1>
+  <br><br>
+  <h1 style="text-align: center; font-weight: bolder;font-family: 'Nothing You Could Do', cursive;"> Meet The Team </h1>
+​
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6" style="justify-content: space-between;">
+        <img style="padding: 2 2px;" src="static/photos/IMG-20190430-WA0005.jpg" width="200px" height="170px" class="rotateimg270">
+        <img style="padding: 0 4px;" src="static/photos/IMG-20190912-WA0082.jpg" width="170px" height="200px">
+        <br><br>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrO0d-zbBIrKtNk0kIvstWE3g8cIg5LBgGokqls0QnBd0YVcF1" width="400px" height="200px">
+        <br><br>
+        <img style="padding: 2 2px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqv0mScNWnkB0Bo-qGmRoemrPGf2FGf2HNNJTBZOUMISq7W5tG" width="200px" height="200px">
+        <img style="padding: 0 4px;" src="https://www.pets4homes.co.uk/images/articles/216/large/b28bed8b0838bb29c90a57875b928a79.jpg" width="200px" height="200px">
+      </div>
+​
+      <div class="col-md-6">
+        <h4 style="text-align: center; font-weight: bolder;font-family: 'Nothing You Could Do', cursive;
+        font-family: 'Share Tech Mono', monospace; font-size: 30;">MANIRAKORA Alexie</h4>
+        <p> Alexie is a young lady and junior programmer, She lives in Kanombe with her Parents and she took fullstuck web development as a programming course in her career </p>
+        <br>
+        <h4 style="text-align: center; font-weight: bolder;font-family: 'Nothing You Could Do', cursive;
+        font-family: 'Share Tech Mono', monospace; font-size: 30;">UMUHIRE Anitha</h4>
+        <p> Anitha is a young lady and junior programmer, She lives in Kimironko with her Parents and she took fullstuck web development as a programming course in her career</p>
+        <br>
+        <h4 style="text-align: center; font-weight: bolder;font-family: 'Nothing You Could Do', cursive;
+        font-family: 'Share Tech Mono', monospace; font-size: 30;">INGABIRE Aline</h4>
+        <p> Aline is a young lady and junior programmer, She lives in Kanombe with her Parents and she took fullstuck web development as a programming course in her career </p>
+        <br>
+        <h4 style="text-align: center; font-weight: bolder;font-family: 'Nothing You Could Do', cursive;
+        font-family: 'Share Tech Mono', monospace; font-size: 30;">MWIZA Brenda</h4>
+        <p> Brenda is a young lady and junior programmer, She lives in Kicukiro with her Famill(Husband and Kids) and she took fullstuck web development as a programming course in her career </p>
+        <br>
+        <h4 style="text-align: center; font-weight: bolder;font-family: 'Nothing You Could Do', cursive;
+        font-family: 'Share Tech Mono', monospace; font-size: 30;">UWASE Ines</h4>
+        <p> Ines is a young lady and junior programmer, She lives in Gatsata with her Parents and she took fullstuck web development as a programming course in her career </p>
+      </div>
+      
+    </div>
   </div>
-  
+​
+  <h1 style="text-align: center; font-weight: bolder;font-family: 'Nothing You Could Do', cursive;
+  font-family: 'Share Tech Mono', monospace; font-size: 18;"> Meet Tera Link</h1>
+​
+  <p style="text-align: center; font-weight: bolder;font-family: 'Nothing You Could Do', cursive;
+  font-family: 'Share Tech Mono', monospace; font-size: 30;"> On this Web Site You will find everything about what we do. Our main MISSION is to help Service-providers post ther services and let clients visit the website so that they can find out about the Service-providers</p>
+  </div>
   <div>
       <footer>
           <hr class="hr">

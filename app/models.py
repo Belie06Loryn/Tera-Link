@@ -40,7 +40,7 @@ class Post(db.Model):
     description = db.Column(db.String())
     user = db.Column(db.Integer, db.ForeignKey('users.id'))
     
-    def save_post(self):
+    def save_service(self):
         db.session.add(self)
         db.session.commit()
 
